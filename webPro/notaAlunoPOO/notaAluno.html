@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Relatório de Alunos</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container" id="topo">
+      <a class="back-home" href="../index.html#inicio">&#8592; Voltar à página principal</a>
+
+      <button type="button" id="themeToggle" class="theme-toggle" aria-label="Alternar tema">
+        <span class="icon">☀️</span>
+        <span class="theme-text">Modo claro</span>
+      </button>
+
+      <section class="card formulario-card">
+        <h1>Cadastro de Aluno</h1>
+
+        <form id="alunoForm">
+          <input type="hidden" id="alunoId" />
+
+          <div class="campo">
+            <label for="nomeAluno">Nome do Aluno</label>
+            <input type="text" id="nomeAluno" name="nomeAluno" placeholder="Digite o nome" required />
+          </div>
+
+          <div class="grid-notas">
+            <div class="campo">
+              <label for="nota1">Nota 1</label>
+              <input type="number" id="nota1" name="nota1" min="0" max="10" step="0.1" required />
+            </div>
+
+            <div class="campo">
+              <label for="nota2">Nota 2</label>
+              <input type="number" id="nota2" name="nota2" min="0" max="10" step="0.1" required />
+            </div>
+
+            <div class="campo">
+              <label for="nota3">Nota 3</label>
+              <input type="number" id="nota3" name="nota3" min="0" max="10" step="0.1" required />
+            </div>
+
+            <div class="campo">
+              <label for="nota4">Nota 4</label>
+              <input type="number" id="nota4" name="nota4" min="0" max="10" step="0.1" required />
+            </div>
+          </div>
+
+          <div class="botoes-formulario">
+            <button type="submit" id="submitAluno" aria-label="Adicionar aluno">
+              <span class="icon">＋</span> Adicionar aluno
+            </button>
+            <button type="button" id="cancelarEdicao" class="btn-secundario hidden" aria-label="Cancelar edição">
+              <span class="icon">↺</span> Cancelar edição
+            </button>
+            <button type="button" id="limparLista" class="btn-secundario" aria-label="Limpar relatório">
+              <span class="icon">✕</span> Limpar relatório
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <section class="card relatorio-card">
+        <div class="cabecalho-relatorio">
+          <h2>Relatório de Alunos</h2>
+          <div class="ordenacao">
+            <label for="ordenarPor">Ordenar por</label>
+            <select id="ordenarPor">
+              <option value="nome">Nome</option>
+              <option value="resultadoFinal">Resultado Final</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="listaAlunos" class="lista-alunos" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+.back-home {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 10;
+  padding: 0.65rem 0.9rem;
+  border: 1px solid rgba(23, 107, 135, 0.25);
+  border-radius: 0.6rem;
+  background: rgba(255, 255, 255, 0.9);
+  color: #176b87;
+  font: 700 0.9rem/1.2 Arial, sans-serif;
+  text-decoration: none;
+  box-shadow: 0 0.5rem 1.2rem rgba(23, 107, 135, 0.12);
+}
+
+.back-home:hover,
+.back-home:focus-visible {
+  background: #176b87;
+  color: #fff;
+}
